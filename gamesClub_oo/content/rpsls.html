@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+
+    <title>Rock Paper Scissors Lizard Spock</title>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+
+    <link rel="Rock paper scissors lizard spock stylesheet" href="../css/gamesClubStyles.css">
+
+    <!--
+    Author:     Nick Hologroski
+    Program:    index0.html
+    Date:
+    Updated:
+    Version:    1.1 (format major.minor updates)
+    Purpose:
+    Description:
+    -->
+
+  </head>
+
+  <body>
+    <!--Title and navigation are contained in a header-->
+    <header>
+
+      <!--Top level heading is used for the logo/home link-->
+      <h1 id="logo"><a href="../index0.html">Games Club</a></h1>
+
+      <!--Nav contains an unordered list for all the math webpages-->
+      <nav>
+
+        <!--Math webpages are in list elements for organization and are in a class for styling use-->
+        <ul>
+          <li class="link"><a href="rps.html">Rock Paper Scissors</a></li>
+          <li class="link"><a href="rpsls.html">Rock Paper Scissors Lizard Spock</a></li>
+          <li class="link"><a href="craps.html">Casino Craps</a></li>
+          <li class="link"><a href="ttt.html">Tic Tac Toe</a></li>
+          <li class="link"><a href="connect4.html">Connect Four</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!--Main element used to specify this is the main content of the document-->
+    <main>
+
+      <!--The aside is empty because there is no content to fill it-->
+      <aside></aside>
+
+      <!--Section element used to contain the descriptions of each webpage-->
+      <section>
+
+        <!--Form element used to contain inputs-->
+        <form class="input-form">
+          <input class="buttons" id="rock" type="button" value="Rock">
+          <input class="buttons" id="paper" type="button" value="Paper">
+          <input class="buttons" id="scissors" type="button" value="Scissors">
+          <input class="buttons" id="lizard" type="button" value="Lizard">
+          <input class="buttons" id="spock" type="button" value="Spock">
+          <input class="buttons" id="resetButton" type="button" value="Reset Game">
+        </form>
+
+        <!--Output element used to output javascript-->
+        <div class="output-div">
+          <output id="output"></output>
+        </div>
+
+      </section>
+
+      <aside></aside>
+
+    </main>
+
+    <!--Footer containing contact information-->
+    <footer>
+      <address>hologron@sheridancollege.ca</address>
+    </footer>
+
+    <!--Script loaded at bottom of page-->
+    <script src="../js/rpsls.js"></script>
+
+  </body>
+</html>

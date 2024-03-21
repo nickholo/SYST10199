@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+
+    <title>Fibonacci Numbers</title>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="Displays a given number of fibonacci numbers">
+
+    <link rel="Fibonacci numbers stylesheet" href="../css/fib.css">
+
+    <!--
+    Author:     Nick Hologroski
+    Program:    fib.html
+    Date:       [01-28-2024]
+    Updated:    [02-11-2024]
+    Version:    1.2 (format major.minor updates)
+    Purpose:    Display the fibonacci sequence
+    Description: Takes user input for the limit, then calculates and displays the fibonacci sequence up to that limit
+    -->
+
+  </head>
+
+  <body>
+
+    <!--Title and navigation are contained in a header-->
+    <header>
+
+      <!--Top level heading is used for the logo/home link-->
+      <h1 id="logo"><a href="../index0.html">Math Club</a></h1>
+
+      <!--Nav contains an unordered list for all the math webpages-->
+      <nav>
+
+        <!--Math webpages are in list elements for organization and are in a class for styling use-->
+        <ul>
+          <li class="link"><a href="increment.html">Increment a Number</a></li>
+          <li class="link"><a href="add.html">Add Two Numbers</a></li>
+          <li class="link"><a href="guess.html">Guess a Number</a></li>
+          <li class="link"><a href="convert.html">Convert Temperature</a></li>
+          <li class="link"><a href="fib.html">Fibonacci Sequence</a></li>
+          <li class="link"><a href="circle.html">Area of a Circle</a></li>
+        </ul>
+      </nav>
+
+    </header>
+
+    <!--Main element used to specify this is the main content of the document-->
+    <main>
+
+      <!--The aside is empty because there is no content to fill it-->
+      <aside></aside>
+
+      <!--Section element used to contain the form and output-->
+      <section>
+
+        <!--2nd level heading used to indicate subheading-->
+        <h2>Fibonacci Sequence</h2>
+
+        <!--Form containing the input elements and their labels-->
+        <form id="userInput">
+
+          <!--Provides a label for the limit input field-->
+          <label for="limit">Limit:</label>
+
+          <!--Creates an input field for the limit input with a type number and minimum value of 1-->
+          <input id="limit" type="number" min="0">
+
+          <!--Creates a button input field to submit the limit and trigger the fibonacci function-->
+          <input id="submit" type="button" value="Submit">
+
+        </form>
+
+        <!--Div containing the output element so that style can be applied to the javascript output-->
+        <div>
+
+          <!--Output element where the javascript is outputted to-->
+          <output id="output"></output>
+
+        </div>
+
+      </section>
+
+      <aside></aside>
+
+    </main>
+
+    <!--Footer containing contact information-->
+    <footer>
+      <address>hologron@sheridancollege.ca</address>
+    </footer>
+
+    <!--External javascript placed at the bottom to delay loading-->
+    <script src="../js/fib.js"></script>
+
+  </body>
+
+</html>

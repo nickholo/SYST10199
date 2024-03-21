@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <title>Guess a Number</title>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="Guess a number game">
+
+    <link rel="Guess a number stylesheet" href="../css/mathClubStyles.css">
+
+    <!--
+    Author:     Nick Hologroski
+    Program:    guess.html
+    Date:       [01-19-2024]
+    Updated:    [02-11-2024]
+    Version:    1.2 (format major.minor updates)
+    Purpose:    Guess a number game
+    Description: Takes user input of for a guess, compares it to a random value and if they're the same the user wins
+    -->
+
+</head>
+
+<body>
+
+<!--Title and navigation are contained in a header-->
+<header>
+
+    <!--Top level heading is used for the logo/home link-->
+    <h1 id="logo"><a href="../index0.html">Math Club</a></h1>
+
+    <!--Nav contains an unordered list for all the math webpages-->
+    <nav>
+
+        <!--Math webpages are in list elements for organization and are in a class for styling use-->
+        <ul>
+            <li class="link"><a href="increment.html">Increment a Number</a></li>
+            <li class="link"><a href="add.html">Add Two Numbers</a></li>
+            <li class="link"><a href="guess.html">Guess a Number</a></li>
+            <li class="link"><a href="convert.html">Convert Temperature</a></li>
+            <li class="link"><a href="fib.html">Fibonacci Sequence</a></li>
+            <li class="link"><a href="circle.html">Area of a Circle</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<!--Main element used to specify this is the main content of the document-->
+<main>
+
+    <!--The aside is empty because there is no content to fill it-->
+    <aside></aside>
+
+    <!--Section element used to contain the form and output-->
+    <section>
+
+        <!--2nd level heading used to indicate subheading-->
+        <h2>Guess a Number</h2>
+
+        <!--Form containing the input elements and their labels-->
+        <form class="input-form">
+
+            <!--Provides a label for the user input field-->
+            <label for="guess-number">Guess: </label>
+
+            <!--Creates an input field for the user input with a type number, default value of 1 and range between 1 and 10-->
+            <input class="num-selector" id="guess-number" type="number" min="1" max="10" value="1">
+
+            <!--Creates a button input field to submit the guess and trigger the game function-->
+            <input class="buttons" id="guess-submit" type="button" value="Guess">
+
+            <input class="buttons" id="guess-reset" type="button" value="Reset">
+
+        </form>
+
+        <!--Div containing the output element so that style can be applied to the javascript output-->
+        <div class="output">
+
+            <!--Output element where the javascript is outputted to-->
+            <output id="output"></output>
+
+        </div>
+
+    </section>
+
+    <aside>
+        <h2>Counter:</h2>
+        <h2>Human Wins: <p id="human-wins"></p> </h2>
+        <h2>Computer Wins: <p id="computer-wins"></p></h2>
+    </aside>
+
+</main>
+
+<!--Footer containing contact information-->
+<footer>
+    <address>hologron@sheridancollege.ca</address>
+</footer>
+
+<!--External javascript placed at the bottom to delay loading-->
+<script src="../js/guessNumber.js"></script>
+
+</body>
+
+</html>

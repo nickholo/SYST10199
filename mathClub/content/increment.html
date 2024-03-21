@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+
+    <title>Increment a Number</title>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="Increments a given number by 1">
+
+    <link rel="Increment stylesheet" href="../css/increment.css">
+
+    <!--
+    Author:     Nick Hologroski
+    Program:    add.html
+    Date:       [01-26-2024]
+    Updated:    [02-11-2024]
+    Version:    1.2 (format major.minor updates)
+    Purpose:    Increment a number by 1
+    Description: Takes a user input for a number and adds 1 to that number then displays the result
+    -->
+
+  </head>
+
+  <body>
+
+    <!--Title and navigation are contained in a header-->
+    <header>
+
+      <!--Top level heading is used for the logo/home link-->
+      <h1 id="logo"><a href="../index0.html">Math Club</a></h1>
+
+      <!--Nav contains an unordered list for all the math webpages-->
+      <nav>
+
+        <!--Math webpages are in list elements for organization and are in a class for styling use-->
+        <ul>
+          <li class="link"><a href="increment.html">Increment a Number</a></li>
+          <li class="link"><a href="add.html">Add Two Numbers</a></li>
+          <li class="link"><a href="guess.html">Guess a Number</a></li>
+          <li class="link"><a href="convert.html">Convert Temperature</a></li>
+          <li class="link"><a href="fib.html">Fibonacci Sequence</a></li>
+          <li class="link"><a href="circle.html">Area of a Circle</a></li>
+        </ul>
+      </nav>
+
+    </header>
+
+    <!--Main element used to specify this is the main content of the document-->
+    <main>
+
+      <!--The aside is empty because there is no content to fill it-->
+      <aside></aside>
+
+      <!--Section element used to contain the form and output-->
+      <section>
+
+        <!--2nd level heading used to indicate subheading-->
+        <h2>Increment a Number</h2>
+
+        <!--Form containing the input elements and their labels-->
+        <form>
+
+          <!--Provides a label for the user input field-->
+          <label for="userInput">Number: </label>
+
+          <!--Creates an input field for the user input with a type number and default value of 0-->
+          <input id=userInput type="number" value="0">
+
+        </form>
+
+        <!--Div containing the output element so that style can be applied to the javascript output-->
+        <div>
+
+          <!--Output element where the javascript is outputted to-->
+          <output id="output"></output>
+
+        </div>
+
+      </section>
+
+      <aside></aside>
+
+    </main>
+
+    <!--Footer containing contact information-->
+    <footer>
+      <address>hologron@sheridancollege.ca</address>
+    </footer>
+
+    <!--External javascript placed at the bottom to delay loading-->
+    <script src="../js/incrementNumber.js"></script>
+
+  </body>
+
+</html>

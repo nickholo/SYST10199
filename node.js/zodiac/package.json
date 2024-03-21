@@ -1,0 +1,14 @@
+{
+  "name": "zodiac",
+  "version": "1.0.0",
+  "description": "Test program to return zodiac animal given year",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nick Hologroski",
+  "license": "ISC",
+  "dependencies": {
+    "chinese-year": "^1.0.9"
+  }
+}

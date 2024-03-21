@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <title>Add Two Numbers</title>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="Adds two numbers">
+
+    <link rel="Add two numbers stylesheet" href="../css/mathClubStyles.css">
+
+    <!--
+    Author:     Nick Hologroski
+    Program:    add.html
+    Date:       [01-19-2024]
+    Updated:    [02-11-2024]
+    Version:    1.2 (format major.minor updates)
+    Purpose:    Add two numbers
+    Description: Takes user input of two numbers, adds them together, then displays them
+    -->
+
+</head>
+
+<body>
+
+<!--Title and navigation are contained in a header-->
+<header>
+
+    <!--Top level heading is used for the logo/home link-->
+    <h1 id="logo"><a href="../index0.html">Math Club</a></h1>
+
+    <!--Nav contains an unordered list for all the math webpages-->
+    <nav>
+
+        <!--Math webpages are in list elements for organization and are in a class for styling use-->
+        <ul>
+            <li class="link"><a href="increment.html">Increment a Number</a></li>
+            <li class="link"><a href="add.html">Add Two Numbers</a></li>
+            <li class="link"><a href="guess.html">Guess a Number</a></li>
+            <li class="link"><a href="convert.html">Convert Temperature</a></li>
+            <li class="link"><a href="fib.html">Fibonacci Sequence</a></li>
+            <li class="link"><a href="circle.html">Area of a Circle</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<!--Main element used to specify this is the main content of the document-->
+<main>
+
+    <!--The aside is empty because there is no content to fill it-->
+    <aside></aside>
+
+    <!--Section element used to contain the form and output-->
+    <section>
+
+        <!--2nd level heading used to indicate subheading-->
+        <h2>Add Two Numbers</h2>
+
+        <!--Form containing the input elements and their labels-->
+        <form class="input-form">
+
+            <!--Provides a label for the num1 input field-->
+            <label for="add-num1">Number 1:</label>
+
+            <!--Creates an input field for the num1 input with a type number and default value of 0-->
+            <input class="num-selector" id="add-num1" type="number" value="0">
+
+            <!--Provides a label for the num2 input field-->
+            <label for="add-num2">Number 2:</label>
+
+            <!--Creates an input field for the num2 input with a type number and default value of 0-->
+            <input class="num-selector" id="add-num2" type="number" value="0">
+
+        </form>
+
+        <!--Div containing the output element so that style can be applied to the javascript output-->
+        <div class="output">
+
+            <!--Output element where the javascript is outputted to-->
+            <output id="output"></output>
+
+        </div>
+
+    </section>
+
+    <aside></aside>
+
+</main>
+
+<!--Footer containing contact information-->
+<footer>
+    <address>hologron@sheridancollege.ca</address>
+</footer>
+
+<!--External javascript placed at the bottom to delay loading-->
+<script src="../js/addTwoNumbers.js"></script>
+
+</body>
+
+</html>
