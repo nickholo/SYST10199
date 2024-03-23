@@ -1,3 +1,7 @@
+//Gets each button and adds an event listener to each. Then when the button is clicked the playGame function is run and the buttons value is passed as a parameter
+document.querySelectorAll(".buttons").forEach(button => button.addEventListener("click", ()=> rps.playGame(button.getAttribute("value"))));
+
+//Contains the win/lose conditions for each choice in an object for easy accessibility
 const choices = [
     {"choice": "rock", "beats": "scissors", "losesTo": "paper"},
 
@@ -6,66 +10,74 @@ const choices = [
     {"choice": "scissors", "beats": "paper", "losesTo": "rock"}
 ]
 
+//Sets the machine choice and player choice
 const players = {
-    humanChoice: 0,
     machineChoice: choices[Math.floor(Math.random() * choices.length)],
-    setHumanChoice(userInput) {
-        this.humanChoice = userInput;
-    }
+    humanChoice: ""
 }
 
+//Contains functions to reset, check win conditions, keep win/loss score and play the game
 const rps = {
+
+    //Keeps score of wins, losses and ties
     wins: 0,
     losses: 0,
     ties: 0,
 
-    disableGame() {
-        document.getElementById("rock").disabled = true;
-        document.getElementById("paper").disabled = true;
-        document.getElementById("scissors").disabled = true;
-    },
-
+    //Resets the game when called by enabling the buttons, removing the current output and generating a new machine choice
     resetGame() {
-        document.getElementById("rock").disabled = false;
-        document.getElementById("paper").disabled = false;
-        document.getElementById("scissors").disabled = false;
+        document.querySelectorAll("#rock, #paper, #scissors").forEach(button => button.disabled = false);
         document.getElementById("output").innerHTML = "";
         players.machineChoice = choices[Math.floor(Math.random() * choices.length)];
     },
 
-    playGame() {
+    //Determines who wins based on the machine choice and the players choice
+    whoWins() {
 
-        if(players.machineChoice.choice === choices[players.humanChoice].choice) {
-            document.getElementById("output").innerHTML = `<h2>Both chose ${players.machineChoice.choice}</h2>`;
+        //If the human choice and the machine choice are the same the game will tie
+        if (players.machineChoice.choice === players.humanChoice) {
+            document.getElementById("output").innerHTML = `<h2>Both chose ${players.humanChoice}</h2>`;
             document.getElementById("output").innerHTML += "<h2>You Tie!</h2>";
             document.getElementById("ties").innerHTML = `${this.ties+= 1}`;
         }
 
-        else if(players.machineChoice.losesTo.includes(choices[players.humanChoice].choice)) {
-            document.getElementById("output").innerHTML = `<h2>${choices[players.humanChoice].choice} beats ${players.machineChoice.choice}</h2>`;
+        //If the machine choice losesTo object contains the human choice the human wins the game
+        if (players.machineChoice.losesTo.includes(players.humanChoice)) {
+            document.getElementById("output").innerHTML = `<h2>${players.humanChoice} beats ${players.machineChoice.choice}</h2>`;
             document.getElementById("output").innerHTML += "<h2>Player Wins!</h2>";
             document.getElementById("wins").innerHTML = `${this.wins+= 1}`;
         }
 
-        else if(players.machineChoice.beats.includes(choices[players.humanChoice].choice)) {
-            document.getElementById("output").innerHTML = `<h2>${players.machineChoice.choice} beats ${choices[players.humanChoice].choice}</h2>`;
+        //If the machine choice beats object contains the human choice the machine wins the game
+        if (players.machineChoice.beats.includes(players.humanChoice)) {
+            document.getElementById("output").innerHTML = `<h2>${players.machineChoice.choice} beats ${players.humanChoice}</h2>`;
             document.getElementById("output").innerHTML += "<h2>Machine Wins!</h2>";
-            document.getElementById("losses").innerHTML = `${this.losses+= 1}`
+            document.getElementById("losses").innerHTML = `${this.losses+= 1}`;
         }
-        this.disableGame();
+
+        //Disables the buttons after the decision is made
+        document.querySelectorAll("#rock, #paper, #scissors").forEach(button => button.disabled = true);
+    },
+
+    playGame(value) {
+        if (value === "Rock") {
+            players.humanChoice = choices[0].choice;
+            this.whoWins();
+        }
+
+        else if (value === "Paper") {
+            players.humanChoice = choices[1].choice;
+            this.whoWins();
+        }
+
+        else if (value === "Scissors") {
+            players.humanChoice = choices[2].choice;
+            this.whoWins();
+        }
+
+        else {
+            this.resetGame()
+        }
     }
 }
 
-document.getElementById("rock").addEventListener("click", function() {
-    players.setHumanChoice(0)
-    rps.playGame();
-});
-document.getElementById("paper").addEventListener("click", function() {
-    players.setHumanChoice(1)
-    rps.playGame();
-});
-document.getElementById("scissors").addEventListener("click", function() {
-    players.setHumanChoice(2)
-    rps.playGame();
-});
-document.getElementById("reset-button").addEventListener("click", rps.resetGame);
